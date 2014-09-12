@@ -275,7 +275,7 @@ Next we use the mean for each 5 minute interval for all days to fill in the NA&#
 
 <pre><code class="r">    total_act &lt;- merge(act, by_interval_mean, by = &quot;interval&quot;)
     total_act$impsteps &lt;- ifelse(is.na(total_act$steps.x), total_act$steps.y, total_act$steps.x)
-    total_act_day &lt;- aggregate(total_act$impsteps, by=list(total_act$date), FUN=sum)
+    total_act_day &lt;- aggregate(impsteps ~ date, data = total_act, FUN=sum)
     names(total_act_day) &lt;- c(&quot;date&quot;,&quot;total_imputed_steps&quot;)
     hist(total_act_day$total_imputed_steps, xlab=&quot;Steps&quot;, main=&quot;Distribution of steps taken per day&quot;, breaks=nrow(total_steps))
 </code></pre>
