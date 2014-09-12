@@ -1,11 +1,5 @@
----
-title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
----
-
-
+# "Reproducible Research: Peer Assessment 1"
+# 
 ## Loading and preprocessing the data
 Preconditions for this exercise are that the data is downloaded and unzipped to the working directory.
 ```{r}
@@ -75,6 +69,6 @@ To answer this question, first create a new factor variable in the dataset with 
 ```
 Finally, make a panel plot containing a time series plot of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis)
 ```{r}
-library("lattice")
+    library("lattice")
     xyplot(act_weekdays$steps ~ act_weekdays$interval | act_weekdays$day_type, type = "l", xlab="Interval", ylab="Average steps", layout = c(1,2))
 ```

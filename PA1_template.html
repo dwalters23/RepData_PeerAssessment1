@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<title>Loading and preprocessing the data</title>
+<title>&ldquo;Reproducible Research: Peer Assessment 1&rdquo;</title>
 
 <script type="text/javascript">
 window.onload = function() {
@@ -201,6 +201,8 @@ hr {
 </head>
 
 <body>
+<h1>&ldquo;Reproducible Research: Peer Assessment 1&rdquo;</h1>
+
 <h2>Loading and preprocessing the data</h2>
 
 <p>Preconditions for this exercise are that the data is downloaded and unzipped to the working directory.</p>
@@ -307,7 +309,7 @@ Next we use the mean for each 5 minute interval for all days to fill in the NA&#
 
 <p>Finally, make a panel plot containing a time series plot of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis)</p>
 
-<pre><code class="r">library(&quot;lattice&quot;)
+<pre><code class="r">    library(&quot;lattice&quot;)
     xyplot(act_weekdays$steps ~ act_weekdays$interval | act_weekdays$day_type, type = &quot;l&quot;, xlab=&quot;Interval&quot;, ylab=&quot;Average steps&quot;, layout = c(1,2))
 </code></pre>
 
