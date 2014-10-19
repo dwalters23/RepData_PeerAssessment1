@@ -226,7 +226,7 @@ hr {
 <pre><code class="r">    print(mean(total_steps$steps))
 </code></pre>
 
-<pre><code>## [1] 10766
+<pre><code>## [1] 10766.19
 </code></pre>
 
 <pre><code class="r">    print(median(total_steps$steps))
@@ -287,13 +287,13 @@ Next we use the mean for each 5 minute interval for all days to fill in the NA&#
 <pre><code class="r">    print(mean(total_act_day$total_imputed_steps))
 </code></pre>
 
-<pre><code>## [1] 10766
+<pre><code>## [1] 10766.19
 </code></pre>
 
 <pre><code class="r">    print(median(total_act_day$total_imputed_steps))
 </code></pre>
 
-<pre><code>## [1] 10766
+<pre><code>## [1] 10766.19
 </code></pre>
 
 <p>The impact of imputing missing data on the estimates of the total daily number of steps is small, as would be expected.  We added an average value for the missing data, therefore it&#39;s natural that the mean and median would change very little.</p>

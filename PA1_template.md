@@ -15,7 +15,7 @@ Aggregate will only perform the function (in this case "sum") when there is data
     hist(total_steps$steps, xlab="Steps", main="Distribution of steps taken per day", breaks=nrow(total_steps))
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png) 
 
 Calculate mean and median steps per day:
 
@@ -24,7 +24,7 @@ Calculate mean and median steps per day:
 ```
 
 ```
-## [1] 10766
+## [1] 10766.19
 ```
 
 ```r
@@ -43,7 +43,7 @@ This is a time series plot of the total number of steps taken in each interval a
             ylab = "Average steps", main="Avg steps per interval")
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
 
 Which 5 minute interval contains the max number of steps?
 
@@ -84,7 +84,7 @@ Next we use the mean for each 5 minute interval for all days to fill in the NA's
     hist(total_act_day$total_imputed_steps, xlab="Steps", main="Distribution of steps taken per day", breaks=nrow(total_steps))
 ```
 
-![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7.png) 
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png) 
 
 Now recalculate the mean and median for the whole dataset, including the added imputed step counts.
 
@@ -93,7 +93,7 @@ Now recalculate the mean and median for the whole dataset, including the added i
 ```
 
 ```
-## [1] 10766
+## [1] 10766.19
 ```
 
 ```r
@@ -101,7 +101,7 @@ Now recalculate the mean and median for the whole dataset, including the added i
 ```
 
 ```
-## [1] 10766
+## [1] 10766.19
 ```
 
 The impact of imputing missing data on the estimates of the total daily number of steps is small, as would be expected.  We added an average value for the missing data, therefore it's natural that the mean and median would change very little.
@@ -120,4 +120,4 @@ Finally, make a panel plot containing a time series plot of the 5-minute interva
     xyplot(act_weekdays$steps ~ act_weekdays$interval | act_weekdays$day_type, type = "l", xlab="Interval", ylab="Average steps", layout = c(1,2))
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
+![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 
