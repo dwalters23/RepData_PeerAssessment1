@@ -1,5 +1,5 @@
 # "Reproducible Research: Peer Assessment 1"
-# 
+#  
 ## Loading and preprocessing the data
 Preconditions for this exercise are that the data is downloaded and unzipped to the working directory.
 ```{r}
